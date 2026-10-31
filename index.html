@@ -16,5 +16,87 @@
       </p>
       <h3>Why wait? Let's get started.</h3>
     </section>
+
+    <section class="form-container">
+      <h2>Create your account</h2>
+
+      <form action="https://httpbin.org/post" method="POST">
+        <fieldset>
+          <legend>PERSONAL INFORMATION</legend>
+
+          <div class="user-name input-field">
+            <label for="first-name">FIRST NAME</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="John"
+              autocomplete="given-name"
+              required
+            />
+
+            <label for="last-name">LAST NAME</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Doe"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+
+          <div class="contacts input-field">
+            <label for="email">EMAIL ADDRESS</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="phone">PHONE NUMBER</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="+260971234567"
+              pattern="\+260(97|77|96|76|95|75)[0-9]{7}"
+              title="Enter a valid Zambian mobile number, e.g. +260971234567"
+              inputmode="tel"
+              required
+            />
+          </div>
+
+          <div class="account-security input-field">
+            <label for="password">PASSWORD</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              minlength="8"
+              required
+            />
+
+            <label for="confirm-password">CONFIRM PASSWORD</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Re-enter your password"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <div class="btn-action input-field">
+          <button type="submit" class="btn-submit">Create Account</button>
+
+          <p>Already have an account? <span>Log in</span></p>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
