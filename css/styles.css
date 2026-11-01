@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "Norse";
+  src: url("../assets/Norsebold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Font Family */
   --font-heading: "Montserrat", sans-serif;
@@ -24,6 +32,15 @@
   /* Feedback */
   --color-error: #dc3545;
   --color-success: #198754;
+
+  /*  Margin/Padding  */
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --padding-lg: 2rem;
+
+  --margin-sm: 0.5rem;
+  --margin-md: 1rem;
+  --margin-lg: 2rem;
 }
 
 * {
@@ -41,4 +58,51 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.aside-bg {
+  width: calc((1 / 3) * 100vw);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: repeat(5 1fr);
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: inherit;
+  position: absolute;
+  top: 35%;
+  background-color: #0c150c7e;
+}
+
+.logo h2 {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 8rem;
+  font-family: "Norse";
+}
+
+#bg-img {
+  width: inherit;
+  object-fit: cover;
+}
+
+.logo img {
+  width: calc(0.08 * 100vw);
+  height: auto;
+  object-fit: cover;
+}
+
+.main-container {
+  margin: var(--margin-lg);
 }
