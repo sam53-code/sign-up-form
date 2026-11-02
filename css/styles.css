@@ -22,12 +22,13 @@
 
   /* Backgrounds */
   --color-bg: #f8f9f8;
+  --color-bg-dark: #374132;
   --color-bg-clear: #ffffff;
   --color-bg-secondary: #e9ede7;
 
   /* Text */
   --color-text: #202820;
-  --color-text-muted: #687368;
+  --color-text-muted: #b2b8b2;
   --color-text-light: #ffffff;
 
   /* Primary */
@@ -67,6 +68,47 @@
 body {
   background-color: var(--color-bg);
   font-family: var(--font-body);
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+  margin: 0;
+  padding: var(--space-md) var(--space-2xl);
+  background-color: var(--color-bg-dark);
+  p {
+    color: var(--color-text-light);
+    word-spacing: var(--space-xs);
+  }
+}
+
+.brand {
+  font-family: var(--font-logo);
+  font-size: var(--font-lg);
+  color: var(--color-text-light);
+  text-decoration: none;
+  letter-spacing: var(--space-sm);
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  a {
+    text-decoration: none;
+    color: var(--color-text-light);
+  }
+  a:hover {
+    text-decoration: underline;
+    color: var(--color-text-muted);
+  }
 }
 
 h1,
